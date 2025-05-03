@@ -4,21 +4,22 @@
 
 // BuffPotion — kind: 'buff', array stats: string[], duration: number
 
-interface HealingPotion{
+export interface HealingPotion{
     kind: 'heal';
     hpRestore: number;
     expiry: string;
 }
 
-interface ManaPotion{
+export interface ManaPotion{
     kind: 'mana';
     mpRestore: number;
     concentration?: number;
 }
 
-interface BuffPotion{
+export interface BuffPotion{
     kind: 'buff';
     stats: string[];
     duration: number;
 }
 
+export type PotionTypes = HealingPotion | ManaPotion | BuffPotion
